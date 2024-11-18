@@ -1,5 +1,6 @@
 import { addTodoForPostReq } from "@/actions/todoAction";
 import TodoForm from "@/components/TodoForm";
+import TodoLists from "@/components/TodoLists";
 import Link from "next/link";
 
 const page = async() => {
@@ -14,11 +15,7 @@ const page = async() => {
      <TodoForm/>
       {getData.todo?.map((todo)=>{
         return(
-          <Link key={todo.id} href={`Todo/${todo.id}`}> 
-            <div className="flex justify-center"> 
-            <h1 className="border border-gray-300 rounded text-gray-500 p-3 text-center m-3 flex w-2/4 items-center text-">{todo.todos}</h1>
-            </div>
-          </Link>
+          <TodoLists todo={todo} key={todo.id}/>
         )
       })}
     </div>

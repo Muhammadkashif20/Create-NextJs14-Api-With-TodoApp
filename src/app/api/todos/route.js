@@ -8,7 +8,7 @@ const mockData=[
     {
         id:2,
         todos:'task2',
-        isCompleted:false,
+        isCompleted:true,
     }
     ,
     {
